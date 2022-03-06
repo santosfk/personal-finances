@@ -6,6 +6,7 @@ import { Category } from "./types/Category";
 import { Item } from "./types/Item";
 function App() {
   const [list, setList] = useState(items);
+  const [currentMonth, setCurrentMonth] = useState();
   return (
     <style.Container>
       <style.Header>
