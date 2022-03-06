@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import * as style from "./app.styles";
+import { categories } from "./data/categories";
+import { items } from "./data/items";
+import { Category } from "./types/Category";
+import { Item } from "./types/Item";
 function App() {
+  const [list, setList] = useState(items);
   return (
     <style.Container>
       <style.Header>
