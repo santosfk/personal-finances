@@ -1,6 +1,7 @@
 import React from "react";
 import * as style from "./styles";
 import { Item } from "../../types/Item";
+import TableItems from "../TableItems";
 
 type Props = {
   list: Item[];
@@ -19,12 +20,7 @@ function Table({ list }: Props) {
       </thead>
       <tbody>
         {list.map((item, index) => (
-          <tr key={index}>
-            <td>data here</td>
-            <td>{item.category}</td>
-            <td>{item.title}</td>
-            <td>{item.value}</td>
-          </tr>
+          <TableItems key={index} item={item} />
         ))}
       </tbody>
     </style.Container>
