@@ -23,5 +23,13 @@ export const formatDate = (date: Date): string => {
   let month = date.getMonth() + 1;
   let day = date.getDate();
 
-  return `${day}/${month}/${year}`;
+  return `${formatNumberDate(day)}/${formatNumberDate(month)}/${year}`;
+};
+
+export const formatNumberDate = (number: Number): string => {
+  if (number < 10) {
+    return `0${number}`;
+  } else {
+    return `${number}`;
+  }
 };
