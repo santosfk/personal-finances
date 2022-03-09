@@ -7,3 +7,10 @@ export const TableContainer = styled.tr`
 export const TableItem = styled.td`
   margin: 10px 0;
 `;
+
+export const Category = styled.div<{ color: String }>`
+  background-color: ${(props) => props.color};
+  color: white;
+  font-weight: bold;
+  padding: 2px;
+`;
