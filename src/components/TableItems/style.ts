@@ -14,3 +14,6 @@ export const Category = styled.div<{ color: String }>`
   font-weight: bold;
   padding: 2px;
 `;
+export const Value = styled.div<{ color: String }>`
+  color: ${(props) => props.color};
+`;
