@@ -1,7 +1,13 @@
 import React from "react";
 import * as style from "./styles";
+import { Item } from "../../types/Item";
+import TableItems from "../TableItems";
 
-function Table() {
+type Props = {
+  list: Item[];
+};
+
+function Table({ list }: Props) {
   return (
     <style.Container>
       <thead>
@@ -12,6 +18,11 @@ function Table() {
           <style.HeadColum width={100}>Valor</style.HeadColum>
         </tr>
       </thead>
+      <tbody>
+        {list.map((item, index) => (
+          <TableItems key={index} item={item} />
+        ))}
+      </tbody>
     </style.Container>
   );
 }

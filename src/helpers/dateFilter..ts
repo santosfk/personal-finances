@@ -1,7 +1,7 @@
 import { Item } from "../types/Item";
 export const getCurrentMonth = () => {
   let now = new Date();
-  return `${now.getFullYear()} - ${now.getMonth() + 1}`;
+  return `${now.getFullYear()}-${now.getMonth() + 1}`;
 };
 
 export const filterListByMonth = (list: Item[], date: string): Item[] => {
@@ -10,10 +10,26 @@ export const filterListByMonth = (list: Item[], date: string): Item[] => {
   for (let i in list) {
     if (
       list[i].date.getFullYear() === parseInt(year) &&
-      list[1].date.getMonth() + 1 === parseInt(month)
+      list[i].date.getMonth() + 1 === parseInt(month)
     ) {
       newList.push(list[i]);
     }
   }
   return newList;
+};
+
+export const formatDate = (date: Date): string => {
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+
+  return `${formatNumberDate(day)}/${formatNumberDate(month)}/${year}`;
+};
+
+export const formatNumberDate = (number: Number): string => {
+  if (number < 10) {
+    return `0${number}`;
+  } else {
+    return `${number}`;
+  }
 };
