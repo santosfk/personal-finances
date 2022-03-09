@@ -8,10 +8,10 @@ type Props = {
 function TableItems({ item }: Props) {
   return (
     <style.TableContainer>
-      <td>{formatDate(item.date)}</td>
-      <td>{item.category}</td>
-      <td>{item.title}</td>
-      <td>{item.value}</td>
+      <style.TableItem>{formatDate(item.date)}</style.TableItem>
+      <style.TableItem>{item.category}</style.TableItem>
+      <style.TableItem>{item.title}</style.TableItem>
+      <style.TableItem>{item.value}</style.TableItem>
     </style.TableContainer>
   );
 }
