@@ -1,6 +1,6 @@
 import React from "react";
 import { Item } from "../../types/Item";
-import { formatDate } from "../../helpers/dateFilter.";
+import { formatDate } from "../../helpers/dateFilter";
 import { categories } from "../../data/categories";
 import * as style from "./style";
 type Props = {

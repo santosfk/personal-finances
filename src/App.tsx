@@ -4,7 +4,7 @@ import { categories } from "./data/categories";
 import { items } from "./data/items";
 import { Category } from "./types/Category";
 import { Item } from "./types/Item";
-import { filterListByMonth, getCurrentMonth } from "./helpers/dateFilter.";
+import { filterListByMonth, getCurrentMonth } from "./helpers/dateFilter";
 import Table from "./components/Table";
 import infoArea from "./components/InfoArea";
 import InfoArea from "./components/InfoArea";
@@ -23,7 +23,7 @@ function App() {
         <style.Title>Personal Finances</style.Title>
       </style.Header>
       <style.Body>
-        <InfoArea />
+        <InfoArea currentMonth={currentMonth} />
         <Table list={filteredList} />
       </style.Body>
     </style.Container>
