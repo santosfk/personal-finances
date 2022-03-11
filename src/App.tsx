@@ -6,7 +6,6 @@ import { Category } from "./types/Category";
 import { Item } from "./types/Item";
 import { filterListByMonth, getCurrentMonth } from "./helpers/dateFilter";
 import Table from "./components/Table";
-import infoArea from "./components/InfoArea";
 import InfoArea from "./components/InfoArea";
 function App() {
   const [list, setList] = useState(items);
@@ -50,6 +49,7 @@ function App() {
           income={income}
           expense={expense}
         />
+
         <Table list={filteredList} />
       </style.Body>
     </style.Container>
