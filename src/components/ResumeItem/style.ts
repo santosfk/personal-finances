@@ -3,4 +3,6 @@ export const Container = styled.div`
   flex: 1;
 `;
 export const Title = styled.div``;
-export const Value = styled.div``;
+export const Value = styled.div<{ color?: String }>`
+  color: ${(props) => props.color ?? "black"};
+`;

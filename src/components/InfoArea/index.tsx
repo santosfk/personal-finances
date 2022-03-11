@@ -34,9 +34,13 @@ export default function InfoArea({
         <style.MonthArrow onClick={handleNextMonth}> ➡️</style.MonthArrow>
       </style.MonthArea>
       <style.ResumeArea>
-        <ResumeItem title="Receitas" value={income} />
-        <ResumeItem title="Despesas" value={expense} />
-        <ResumeItem title="Balanço" value={income - expense} />
+        <ResumeItem color="" title="Receitas" value={income} />
+        <ResumeItem color="" title="Despesas" value={expense} />
+        <ResumeItem
+          title="Balanço"
+          value={income - expense}
+          color={income - expense < 0 ? "red" : "green"}
+        />
       </style.ResumeArea>
     </style.Container>
   );
