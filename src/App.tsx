@@ -7,8 +7,11 @@ import { Item } from "./types/Item";
 import { filterListByMonth, getCurrentMonth } from "./helpers/dateFilter";
 import Table from "./components/Table";
 import InfoArea from "./components/InfoArea";
+import AddArea from "./components/AddArea";
+import moment from "moment";
+
 function App() {
-  const [list, setList] = useState(items);
+  const [list, setList] = useState<Item[]>(items);
   const [filteredList, setFilteredList] = useState<Item[]>([]);
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
   const [income, setIncome] = useState(0);
@@ -17,7 +20,6 @@ function App() {
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth]);
-  console.log(filteredList);
 
   useEffect(() => {
     let incomeValue = 0;
@@ -37,6 +39,19 @@ function App() {
     setCurrentMonth(newMonth);
   };
 
+  const handleAddList = (item: Item) => {
+    let newList: Item[] = [...list];
+    const newData = moment(item.date, "YYYY-MM-DD").toDate();
+    let pushList = newList.push({
+      date: newData,
+      category: item.category,
+      title: item.title,
+      value: item.value,
+    });
+    setList(newList);
+    console.log(pushList);
+    //teste
+  };
   return (
     <style.Container>
       <style.Header>
@@ -49,6 +64,7 @@ function App() {
           income={income}
           expense={expense}
         />
+        <AddArea handleAddList={handleAddList} />
 
         <Table list={filteredList} />
       </style.Body>
