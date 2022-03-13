@@ -77,6 +77,7 @@ export const TitleContent = styled.div`
       height: 25px;
       font-size: 0.8rem;
       transition: 0.5s;
+      padding-left: 10px;
     }
     input:focus {
       background-color: var(--blue);
