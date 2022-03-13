@@ -6,6 +6,8 @@ export const TableContainer = styled.tr`
 
 export const TableItem = styled.td`
   margin: 10px 0;
+  color: var(--green);
+  font-weight: bold;
 `;
 
 export const Category = styled.div<{ color: String }>`

@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const MonthArea = styled.div`
   flex: 1;
   display: flex;
-  color: var(--green);
+  color: var(--white-blue);
   font-weight: bold;
 `;
 export const MonthArrow = styled.div`
@@ -32,5 +32,6 @@ export const ResumeArea = styled.div`
   flex: 2;
   display: flex;
   align-items: center;
+  font-weight: bold;
 `;
 export const MonthTitle = styled.div``;
