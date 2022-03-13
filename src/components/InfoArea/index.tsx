@@ -26,6 +26,7 @@ export default function InfoArea({
     currentDate.setMonth(currentDate.getMonth() + 1);
     monthChange(`${currentDate.getFullYear()} - ${currentDate.getMonth() + 1}`);
   };
+  const showValue = (income - expense).toFixed(2);
   return (
     <style.Container>
       <style.MonthArea>
@@ -38,7 +39,7 @@ export default function InfoArea({
         <ResumeItem color="" title="Despesas" value={expense} />
         <ResumeItem
           title="Balanço"
-          value={income - expense}
+          value={showValue}
           color={income - expense < 0 ? "red" : "green"}
         />
       </style.ResumeArea>
