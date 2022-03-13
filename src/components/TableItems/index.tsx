@@ -12,7 +12,7 @@ function TableItems({ item }: Props) {
       <style.TableItem>{formatDate(item.date)}</style.TableItem>
       <style.TableItem>
         <style.Category
-          color={categories[item.category].expense ? "red" : "green"}
+          color={categories[item.category].expense ? "#DC143C" : "#00FA9A"}
         >
           {categories[item.category].title}
         </style.Category>

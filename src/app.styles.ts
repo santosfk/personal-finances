@@ -10,7 +10,7 @@ export const Header = styled.div`
   padding-top: 10px;
 `;
 export const Title = styled.h1`
-  color: darkblue;
+  color: var(--white-green);
 `;
 export const Body = styled.div`
   margin: auto;

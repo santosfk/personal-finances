@@ -122,13 +122,13 @@ export const Submit = styled.div`
     font-size: 1rem;
     border: none;
     padding: 5px;
-    border: 2px solid var(--blue);
+    border: 2px solid var(--white-blue);
     transition: 0.5s;
     border-radius: 5px;
     font-weight: bold;
   }
   input:hover {
-    border: 2px solid var(--green);
+    border: 2px solid var(--white-green);
     color: var(--blue);
     letter-spacing: 2px;
   }
