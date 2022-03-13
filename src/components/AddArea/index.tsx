@@ -15,24 +15,59 @@ export default function AddArea({ handleAddList }: Props) {
   };
   return (
     <style.Container>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label>
-          Data <input type="date" {...register("date")}></input>
-        </label>
-        <label>
-          Categoria
-          <input type="radio" value="food" {...register("category")}></input>
-          <input type="radio" value="rent" {...register("category")}></input>
-          <input type="radio" value="salary" {...register("category")}></input>
-        </label>
-        <label>
-          Titulo <input type="text" {...register("title")}></input>
-        </label>
-        <label>
-          Valor <input type="number" {...register("value")}></input>
+      <style.FormContent onSubmit={handleSubmit(onSubmit)}>
+        <style.ReceiveAlldata>
+          <style.DataContent>
+            <label>
+              <span>Data</span>{" "}
+              <input type="date" {...register("date")}></input>
+            </label>
+          </style.DataContent>
+          <style.CategoryContent>
+            <span> Categoria</span>
+            <style.OptionsRadio>
+              <label>
+                Comida
+                <input
+                  type="radio"
+                  value="food"
+                  {...register("category")}
+                ></input>
+              </label>
+              <label htmlFor="rent">
+                Aluguel
+                <input
+                  type="radio"
+                  value="rent"
+                  {...register("category")}
+                ></input>
+              </label>
+              <label>
+                Salario
+                <input
+                  type="radio"
+                  value="salary"
+                  {...register("category")}
+                ></input>
+              </label>
+            </style.OptionsRadio>
+          </style.CategoryContent>
+          <style.TitleContent>
+            <label>
+              Titulo <input type="text" {...register("title")}></input>
+            </label>
+          </style.TitleContent>
+          <style.ValueContent>
+            <label>
+              Valor
+              <input type="number" {...register("value")}></input>
+            </label>
+          </style.ValueContent>
+        </style.ReceiveAlldata>
+        <style.Submit>
           <input type="submit" />
-        </label>
-      </form>
+        </style.Submit>
+      </style.FormContent>
     </style.Container>
   );
 }

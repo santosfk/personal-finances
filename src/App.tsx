@@ -46,7 +46,7 @@ function App() {
       date: newData,
       category: item.category,
       title: item.title,
-      value: item.value,
+      value: Number(item.value),
     });
     setList(newList);
     console.log(pushList);

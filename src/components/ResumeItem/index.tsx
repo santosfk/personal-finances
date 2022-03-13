@@ -2,7 +2,7 @@ import * as React from "react";
 import * as style from "./style";
 type Props = {
   title: string;
-  value: number;
+  value: string;
   color: string;
 };
 export default function ResumeItem({ title, value, color }: Props) {
