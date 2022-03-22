@@ -6,6 +6,7 @@ export const TableContainer = styled.tr`
 
 export const TableItem = styled.td`
   margin: 10px 0;
+  color: ${({ theme }) => theme.COLOR.TEXT};
 `;
 
 export const Category = styled.div<{ color: String }>`

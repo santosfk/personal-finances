@@ -54,11 +54,15 @@ function App() {
     console.log(pushList);
     //teste
   };
+  const [changeTheme, setChangeTheme] = useState<Boolean>(false);
   return (
-    <ThemeProvider theme={themes.dark}>
+    <ThemeProvider theme={changeTheme ? themes.dark : themes.light}>
       <style.Container>
         <style.Header>
           <style.Title>Personal Finances</style.Title>
+          <style.SwitchTheme onClick={() => setChangeTheme(!changeTheme)}>
+            Switch Theme
+          </style.SwitchTheme>
         </style.Header>
         <style.Body>
           <InfoArea

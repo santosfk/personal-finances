@@ -7,8 +7,8 @@ export const Container = styled.div`
 `;
 export const Header = styled.div`
   width: 100%;
-  text-align: center;
   padding-top: 10px;
+  text-align: center;
 `;
 export const Title = styled.h1`
   color: darkblue;
@@ -16,4 +16,10 @@ export const Title = styled.h1`
 export const Body = styled.div`
   margin: auto;
   max-width: 980px;
+`;
+export const SwitchTheme = styled.button`
+  width: 100px;
+  padding: 5px;
+  position: relative;
+  margin: auto;
 `;
