@@ -9,6 +9,8 @@ import Table from "./components/Table";
 import InfoArea from "./components/InfoArea";
 import AddArea from "./components/AddArea";
 import moment from "moment";
+import { ThemeProvider } from "styled-components";
+import themes from "./themes";
 
 function App() {
   const [list, setList] = useState<Item[]>(items);
@@ -53,22 +55,24 @@ function App() {
     //teste
   };
   return (
-    <style.Container>
-      <style.Header>
-        <style.Title>Personal Finances</style.Title>
-      </style.Header>
-      <style.Body>
-        <InfoArea
-          currentMonth={currentMonth}
-          monthChange={handleMonthChange}
-          income={income}
-          expense={expense}
-        />
-        <AddArea handleAddList={handleAddList} />
+    <ThemeProvider theme={themes.dark}>
+      <style.Container>
+        <style.Header>
+          <style.Title>Personal Finances</style.Title>
+        </style.Header>
+        <style.Body>
+          <InfoArea
+            currentMonth={currentMonth}
+            monthChange={handleMonthChange}
+            income={income}
+            expense={expense}
+          />
+          <AddArea handleAddList={handleAddList} />
 
-        <Table list={filteredList} />
-      </style.Body>
-    </style.Container>
+          <Table list={filteredList} />
+        </style.Body>
+      </style.Container>
+    </ThemeProvider>
   );
 }
 
