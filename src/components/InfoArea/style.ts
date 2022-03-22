@@ -34,5 +34,6 @@ export const ResumeArea = styled.div`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.COLOR.TEXT};
+  font-weight: bold;
 `;
 export const MonthTitle = styled.div``;
