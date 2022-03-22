@@ -51,7 +51,7 @@ export const OptionsRadio = styled.div`
   justify-content: space-around;
 
   label {
-    color: var(--blue);
+    color: ${({ theme }) => theme.COLOR.BLUE};
     margin: 0px 5px;
     font-weight: bold;
   }

@@ -3,7 +3,7 @@ export const Container = styled.div`
   flex: 1;
 `;
 export const Title = styled.div`
-  color: var(--blue);
+  color: ${({ theme }) => theme.COLOR.BLUE};
   margin-bottom: 5px;
   text-align: center;
   font-weight: bold;
