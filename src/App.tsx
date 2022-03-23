@@ -40,6 +40,11 @@ function App() {
   const handleMonthChange = (newMonth: string) => {
     setCurrentMonth(newMonth);
   };
+  const handleRemoveItem = (index: number, item: Item) => {
+    const newList = [...filteredList];
+    const listFilter = newList.filter((newItem) => newItem !== item);
+    setList(listFilter);
+  };
 
   const handleAddList = (item: Item) => {
     let newList: Item[] = [...list];
@@ -60,9 +65,6 @@ function App() {
       <style.Container>
         <style.Header>
           <style.Title>Personal Finances</style.Title>
-          <style.SwitchTheme onClick={() => setChangeTheme(!changeTheme)}>
-            Switch Theme
-          </style.SwitchTheme>
         </style.Header>
         <style.Body>
           <InfoArea
@@ -73,7 +75,7 @@ function App() {
           />
           <AddArea handleAddList={handleAddList} />
 
-          <Table list={filteredList} />
+          <Table list={filteredList} handleRemoveItem={handleRemoveItem} />
         </style.Body>
       </style.Container>
     </ThemeProvider>
