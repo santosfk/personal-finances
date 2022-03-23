@@ -65,6 +65,9 @@ function App() {
       <style.Container>
         <style.Header>
           <style.Title>Personal Finances</style.Title>
+          <style.SwitchTheme onClick={() => setChangeTheme(!changeTheme)}>
+            Switch Theme
+          </style.SwitchTheme>
         </style.Header>
         <style.Body>
           <InfoArea
