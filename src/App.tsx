@@ -9,6 +9,8 @@ import Table from "./components/Table";
 import InfoArea from "./components/InfoArea";
 import AddArea from "./components/AddArea";
 import moment from "moment";
+import { ThemeProvider } from "styled-components";
+import themes from "./themes";
 
 function App() {
   const [list, setList] = useState<Item[]>(items);
@@ -38,6 +40,11 @@ function App() {
   const handleMonthChange = (newMonth: string) => {
     setCurrentMonth(newMonth);
   };
+  const handleRemoveItem = (index: number, item: Item) => {
+    const newList = [...filteredList];
+    const listFilter = newList.filter((newItem) => newItem !== item);
+    setList(listFilter);
+  };
 
   const handleAddList = (item: Item) => {
     let newList: Item[] = [...list];
@@ -52,23 +59,29 @@ function App() {
     console.log(pushList);
     //teste
   };
+  const [changeTheme, setChangeTheme] = useState<Boolean>(false);
   return (
-    <style.Container>
-      <style.Header>
-        <style.Title>Personal Finances</style.Title>
-      </style.Header>
-      <style.Body>
-        <InfoArea
-          currentMonth={currentMonth}
-          monthChange={handleMonthChange}
-          income={income}
-          expense={expense}
-        />
-        <AddArea handleAddList={handleAddList} />
+    <ThemeProvider theme={changeTheme ? themes.dark : themes.light}>
+      <style.Container>
+        <style.Header>
+          <style.Title>Personal Finances</style.Title>
+          <style.SwitchTheme onClick={() => setChangeTheme(!changeTheme)}>
+            Switch Theme
+          </style.SwitchTheme>
+        </style.Header>
+        <style.Body>
+          <InfoArea
+            currentMonth={currentMonth}
+            monthChange={handleMonthChange}
+            income={income}
+            expense={expense}
+          />
+          <AddArea handleAddList={handleAddList} />
 
-        <Table list={filteredList} />
-      </style.Body>
-    </style.Container>
+          <Table list={filteredList} handleRemoveItem={handleRemoveItem} />
+        </style.Body>
+      </style.Container>
+    </ThemeProvider>
   );
 }
 

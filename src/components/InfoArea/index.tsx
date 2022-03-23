@@ -42,7 +42,7 @@ export default function InfoArea({
         <ResumeItem
           title="Balanço"
           value={showValue}
-          color={income - expense < 0 ? "red" : "green"}
+          color={income - expense < 0 ? "red" : "#32CD32"}
         />
       </style.ResumeArea>
     </style.Container>

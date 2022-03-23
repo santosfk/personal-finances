@@ -6,8 +6,11 @@ export const TableContainer = styled.tr`
 
 export const TableItem = styled.td`
   margin: 10px 0;
-  color: var(--green);
+
+  color: ${({ theme }) => theme.COLOR.TEXT};
+
   font-weight: bold;
+
 `;
 
 export const Category = styled.div<{ color: String }>`
@@ -18,4 +21,8 @@ export const Category = styled.div<{ color: String }>`
 `;
 export const Value = styled.div<{ color: String }>`
   color: ${(props) => props.color};
+`;
+export const RemoveItem = styled.h1`
+  font-size: 20px;
+  color: ${({ theme }) => theme.COLOR.TEXT};
 `;
