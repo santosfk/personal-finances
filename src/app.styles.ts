@@ -11,7 +11,9 @@ export const Header = styled.div`
   text-align: center;
 `;
 export const Title = styled.h1`
+
   color: ${({ theme }) => theme.COLOR.BLUE};
+
 `;
 export const Body = styled.div`
   margin: auto;
