@@ -22,4 +22,17 @@ export const SwitchTheme = styled.button`
   padding: 5px;
   position: relative;
   margin: auto;
+  background-color: var(--green);
+  color: ${({ theme }) => theme.COLOR.BACKGROUND};
+  border: none;
+  outline: none;
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-weight: bold;
+  transition: 0.5s;
+  :hover {
+    background-color: var(--red);
+    color: ${({ theme }) => theme.COLOR.TEXT};
+  }
 `;
