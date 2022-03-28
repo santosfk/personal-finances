@@ -12,8 +12,8 @@ export default function MoneyAnimation() {
     animationData: MoneyData,
   };
   const style = {
-    width: "350px",
-    height: "350px",
+    width: "400px",
+    height: "400px",
   };
   const { View } = useLottie(defaultOption, style);
   return View;

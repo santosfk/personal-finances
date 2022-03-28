@@ -74,3 +74,8 @@ export const Collum = styled.div<{ color?: String }>`
     font-size: 2rem;
   }
 `;
+export const AnimationContent = styled.div`
+  margin: auto;
+  width: 400px;
+  height: 400px;
+`;

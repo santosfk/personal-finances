@@ -44,7 +44,9 @@ export default function Signup() {
               <span>precioso Money!</span>
             </style.Collum>
           </style.Row>
-          <MoneyAnimation />
+          <style.AnimationContent>
+            <MoneyAnimation />
+          </style.AnimationContent>
         </style.Content>
       </style.Container>
     </>
