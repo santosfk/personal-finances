@@ -1,23 +1,20 @@
 import React from "react";
-import Lottie from "react-lottie";
+
+import { useLottie } from "lottie-react";
 
 import MoneyData from "../src/MoneyData.json";
 
-export const MoneyAnimation = () => {
+export default function MoneyAnimation() {
   const defaultOption = {
     autoplay: true,
-    loop: false,
+    loop: true,
     keepLastFrame: true,
     animationData: MoneyData,
   };
-  return (
-    <Lottie
-      isClickToPauseDisabled
-      options={defaultOption}
-      height={70}
-      width={70}
-    />
-  );
-};
-
-export default MoneyAnimation;
+  const style = {
+    width: "350px",
+    height: "350px",
+  };
+  const { View } = useLottie(defaultOption, style);
+  return View;
+}
