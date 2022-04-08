@@ -4,6 +4,8 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.COLOR.BACKGROUND};
+  @import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&display=swap");
+  font-family: "Lato", sans-serif;
 `;
 export const Header = styled.div`
   width: 100%;
@@ -11,9 +13,7 @@ export const Header = styled.div`
   text-align: center;
 `;
 export const Title = styled.h1`
-
   color: ${({ theme }) => theme.COLOR.BLUE};
-
 `;
 export const Body = styled.div`
   margin: auto;
