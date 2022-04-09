@@ -5,10 +5,10 @@ export const Container = styled.div`
   font-family: "Roboto Condensed", sans-serif;
   background-color: ${({ theme }) => theme.COLOR.DIV};
   width: 100%;
-  height: 50px;
+  height: 60px;
   margin: 50px 0px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 12px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
 `;

@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLOR.DIV};
-  height: 120px;
-  margin: 50px 0px;
-  padding: 15px;
+  height: 150px;
+  margin: 30px 0px;
+  padding: 5px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
@@ -13,7 +13,8 @@ export const Container = styled.div`
 export const FormContent = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  margin-top: -5px;
 `;
 
 export const DataContent = styled.div`
@@ -45,9 +46,9 @@ export const CategoryContent = styled.div`
   }
 `;
 export const OptionsRadio = styled.div`
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
 
   label {

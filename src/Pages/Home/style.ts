@@ -11,7 +11,7 @@ export const Header = styled.div`
   width: 100%;
   padding-top: 10px;
   display: flex;
-  flex-direction: column;
+
   justify-content: space-evenly;
   align-items: center;
 `;
