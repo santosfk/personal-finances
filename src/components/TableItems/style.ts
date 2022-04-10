@@ -14,7 +14,7 @@ export const Category = styled.div<{ color: String }>`
   background-color: ${(props) => props.color};
   color: white;
   font-weight: bold;
-  padding: 2px;
+
   border-radius: 5px;
 `;
 export const Value = styled.div<{ color: String }>`

@@ -16,7 +16,7 @@ export const Container = styled.div`
 export const MonthArea = styled.div`
   flex: 1;
   display: flex;
-  color: var(--white-blue);
+  color: ${({ theme }) => theme.COLOR.INPUTS};
   font-weight: bold;
 `;
 export const MonthArrow = styled.div`

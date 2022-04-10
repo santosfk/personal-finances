@@ -31,7 +31,10 @@ export const DataContent = styled.div`
     margin-top: 5px;
     outline: none;
     font-weight: bold;
-    color: var(--blue);
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: ${({ theme }) => theme.COLOR.INPUTS};
   }
 `;
 
@@ -55,6 +58,7 @@ export const OptionsRadio = styled.div`
     color: ${({ theme }) => theme.COLOR.BLUE};
     margin: 0px 5px;
     font-weight: bold;
+    color: ${({ theme }) => theme.COLOR.INPUTS};
   }
 `;
 export const TitleContent = styled.div`
@@ -83,7 +87,6 @@ export const TitleContent = styled.div`
     input:focus {
       border: 2px solid var(--white-blue);
       transform: translateY(3px);
-      letter-spacing: 2px;
     }
   }
 `;
