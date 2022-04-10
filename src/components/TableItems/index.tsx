@@ -2,6 +2,8 @@ import React from "react";
 import { Item } from "../../types/Item";
 import { formatDate } from "../../helpers/dateFilter";
 import { categories } from "../../data/categories";
+import { MdDelete } from "react-icons/md";
+
 import * as style from "./style";
 type Props = {
   item: Item;
@@ -28,7 +30,7 @@ function TableItems({ item, index, handleRemoveItem }: Props) {
         </style.Value>
       </style.TableItem>
       <style.RemoveItem onClick={() => handleRemoveItem(index, item)}>
-        X
+        <MdDelete />
       </style.RemoveItem>
     </style.TableContainer>
   );
