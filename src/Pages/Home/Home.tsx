@@ -10,8 +10,8 @@ import AddArea from "../../components/AddArea";
 import moment from "moment";
 import { ThemeProvider } from "styled-components";
 import themes from "../../themes";
-
 import SwitchButton from "../../components/SwitchButton";
+import { List } from "@chakra-ui/react";
 
 function Home() {
   const [list, setList] = useState<Item[]>(items);
@@ -57,6 +57,7 @@ function Home() {
       value: Number(item.value),
     });
     setList(newList);
+
     console.log(pushList);
     //teste
   };

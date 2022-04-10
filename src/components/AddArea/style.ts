@@ -66,23 +66,24 @@ export const TitleContent = styled.div`
     font-weight: bold;
     margin-top: 5px;
     input {
-      background-color: var(--white-green);
+      background: none;
+      border: 2px solid var(--white-green);
       margin-top: 10px;
       margin-bottom: -10px;
       outline: none;
-      border: none;
       width: 250px;
       color: var(--blue);
       font-weight: bold;
       border-radius: 5px;
-      height: 25px;
+      height: 30px;
       font-size: 0.8rem;
       transition: 0.5s;
       padding-left: 10px;
     }
     input:focus {
-      background-color: var(--blue);
-      color: var(--green);
+      border: 2px solid var(--white-blue);
+      transform: translateY(3px);
+      letter-spacing: 2px;
     }
   }
 `;
@@ -96,9 +97,10 @@ export const ValueContent = styled.div`
     color: var(--red);
   }
   input {
+    background: none;
     margin-top: 10px;
     margin-bottom: -5px;
-    height: 25px;
+    height: 30px;
     width: 80px;
     padding-left: 10px;
     border-radius: 5px;
@@ -106,13 +108,13 @@ export const ValueContent = styled.div`
     outline: none;
     border: none;
     transition: 0.4s;
-    background-color: var(--white-green);
+    border: 2px solid var(--white-green);
     color: var(--blue);
     font-weight: bold;
   }
   input:focus {
-    background-color: var(--blue);
-    color: var(--white-green);
+    transform: translateY(3px);
+    border: 2px solid var(--white-blue);
   }
 `;
 export const Submit = styled.div`
