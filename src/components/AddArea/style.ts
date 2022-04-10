@@ -72,7 +72,7 @@ export const TitleContent = styled.div`
       margin-bottom: -10px;
       outline: none;
       width: 250px;
-      color: var(--blue);
+      color: ${({ theme }) => theme.COLOR.INPUTS};
       font-weight: bold;
       border-radius: 5px;
       height: 30px;
@@ -109,7 +109,7 @@ export const ValueContent = styled.div`
     border: none;
     transition: 0.4s;
     border: 2px solid var(--white-green);
-    color: var(--blue);
+    color: ${({ theme }) => theme.COLOR.INPUTS};
     font-weight: bold;
   }
   input:focus {
@@ -121,6 +121,7 @@ export const Submit = styled.div`
   margin: auto;
   margin-top: 20px;
   input {
+    background: none;
     width: 200px;
     font-size: 1rem;
     border: none;
@@ -129,10 +130,11 @@ export const Submit = styled.div`
     transition: 0.5s;
     border-radius: 5px;
     font-weight: bold;
+    color: ${({ theme }) => theme.COLOR.TEXT};
   }
   input:hover {
     border: 2px solid var(--white-green);
-    color: var(--blue);
+    color: var(--white-green);
     letter-spacing: 2px;
   }
 `;
