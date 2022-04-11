@@ -16,7 +16,7 @@ export const Header = styled.div`
   align-items: center;
 `;
 export const Title = styled.h1`
-  color: ${({ theme }) => theme.COLOR.BLUE};
+  color: ${({ theme }) => theme.COLOR.INPUTS};
   font-size: 2rem;
 `;
 export const LabelSwitch = styled.div`
