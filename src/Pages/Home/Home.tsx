@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import * as style from "./style";
 import { categories } from "../../data/categories";
 import { items } from "../../data/items";
-import { Category } from "../../types/Category";
 import { Item } from "../../types/Item";
 import { filterListByMonth, getCurrentMonth } from "../../helpers/dateFilter";
 import Table from "../../components/Table";
@@ -11,6 +10,8 @@ import AddArea from "../../components/AddArea";
 import moment from "moment";
 import { ThemeProvider } from "styled-components";
 import themes from "../../themes";
+import SwitchButton from "../../components/SwitchButton";
+import { List } from "@chakra-ui/react";
 
 function Home() {
   const [list, setList] = useState<Item[]>(items);
@@ -56,8 +57,12 @@ function Home() {
       value: Number(item.value),
     });
     setList(newList);
+
     console.log(pushList);
     //teste
+  };
+  const switchTheme = () => {
+    setChangeTheme(!changeTheme);
   };
   const [changeTheme, setChangeTheme] = useState<Boolean>(false);
   return (
@@ -65,9 +70,7 @@ function Home() {
       <style.Container>
         <style.Header>
           <style.Title>Personal Finances</style.Title>
-          <style.SwitchTheme onClick={() => setChangeTheme(!changeTheme)}>
-            Switch Theme
-          </style.SwitchTheme>
+          <SwitchButton switchTheme={switchTheme} />
         </style.Header>
         <style.Body>
           <InfoArea

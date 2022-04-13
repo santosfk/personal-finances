@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLOR.DIV};
-  height: 120px;
-  margin: 50px 0px;
-  padding: 15px;
+  height: 150px;
+  margin: 30px 0px;
+  padding: 5px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
@@ -13,7 +13,8 @@ export const Container = styled.div`
 export const FormContent = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  margin-top: -5px;
 `;
 
 export const DataContent = styled.div`
@@ -30,7 +31,10 @@ export const DataContent = styled.div`
     margin-top: 5px;
     outline: none;
     font-weight: bold;
-    color: var(--blue);
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: ${({ theme }) => theme.COLOR.INPUTS};
   }
 `;
 
@@ -45,15 +49,16 @@ export const CategoryContent = styled.div`
   }
 `;
 export const OptionsRadio = styled.div`
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
 
   label {
     color: ${({ theme }) => theme.COLOR.BLUE};
     margin: 0px 5px;
     font-weight: bold;
+    color: ${({ theme }) => theme.COLOR.INPUTS};
   }
 `;
 export const TitleContent = styled.div`
@@ -65,23 +70,23 @@ export const TitleContent = styled.div`
     font-weight: bold;
     margin-top: 5px;
     input {
-      background-color: var(--white-green);
+      background: none;
+      border: 2px solid var(--white-green);
       margin-top: 10px;
       margin-bottom: -10px;
       outline: none;
-      border: none;
       width: 250px;
-      color: var(--blue);
+      color: ${({ theme }) => theme.COLOR.INPUTS};
       font-weight: bold;
       border-radius: 5px;
-      height: 25px;
+      height: 30px;
       font-size: 0.8rem;
       transition: 0.5s;
       padding-left: 10px;
     }
     input:focus {
-      background-color: var(--blue);
-      color: var(--green);
+      border: 2px solid var(--white-blue);
+      transform: translateY(3px);
     }
   }
 `;
@@ -95,9 +100,10 @@ export const ValueContent = styled.div`
     color: var(--red);
   }
   input {
+    background: none;
     margin-top: 10px;
     margin-bottom: -5px;
-    height: 25px;
+    height: 30px;
     width: 80px;
     padding-left: 10px;
     border-radius: 5px;
@@ -105,19 +111,20 @@ export const ValueContent = styled.div`
     outline: none;
     border: none;
     transition: 0.4s;
-    background-color: var(--white-green);
-    color: var(--blue);
+    border: 2px solid var(--white-green);
+    color: ${({ theme }) => theme.COLOR.INPUTS};
     font-weight: bold;
   }
   input:focus {
-    background-color: var(--blue);
-    color: var(--white-green);
+    transform: translateY(3px);
+    border: 2px solid var(--white-blue);
   }
 `;
 export const Submit = styled.div`
   margin: auto;
   margin-top: 20px;
   input {
+    background: none;
     width: 200px;
     font-size: 1rem;
     border: none;
@@ -126,10 +133,11 @@ export const Submit = styled.div`
     transition: 0.5s;
     border-radius: 5px;
     font-weight: bold;
+    color: ${({ theme }) => theme.COLOR.TEXT};
   }
   input:hover {
     border: 2px solid var(--white-green);
-    color: var(--blue);
+    color: var(--white-green);
     letter-spacing: 2px;
   }
 `;

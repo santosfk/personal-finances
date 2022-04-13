@@ -26,30 +26,26 @@ export default function AddArea({ handleAddList }: Props) {
           <style.CategoryContent>
             <span> Categoria</span>
             <style.OptionsRadio>
-              <label>
-                Comida
-                <input
-                  type="radio"
-                  value="food"
-                  {...register("category")}
-                ></input>
-              </label>
-              <label htmlFor="rent">
-                Aluguel
-                <input
-                  type="radio"
-                  value="rent"
-                  {...register("category")}
-                ></input>
-              </label>
-              <label>
-                Salario
-                <input
-                  type="radio"
-                  value="salary"
-                  {...register("category")}
-                ></input>
-              </label>
+              <label>Comida</label>
+              <input
+                type="radio"
+                value="food"
+                {...register("category")}
+              ></input>
+
+              <label htmlFor="rent">Aluguel</label>
+              <input
+                type="radio"
+                value="rent"
+                {...register("category")}
+              ></input>
+
+              <label>Salario</label>
+              <input
+                type="radio"
+                value="salary"
+                {...register("category")}
+              ></input>
             </style.OptionsRadio>
           </style.CategoryContent>
           <style.TitleContent>

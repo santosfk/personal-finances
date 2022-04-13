@@ -14,7 +14,5 @@ export const HeadColum = styled.th<{ width?: Number }>`
 
   color: ${({ theme }) => theme.COLOR.TEXT};
 
-
   font-weight: bold;
-
 `;

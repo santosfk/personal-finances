@@ -5,19 +5,17 @@ export const TableContainer = styled.tr`
 `;
 
 export const TableItem = styled.td`
-  margin: 10px 0;
-
   color: ${({ theme }) => theme.COLOR.TEXT};
 
   font-weight: bold;
-
 `;
 
 export const Category = styled.div<{ color: String }>`
   background-color: ${(props) => props.color};
   color: white;
   font-weight: bold;
-  padding: 2px;
+
+  border-radius: 5px;
 `;
 export const Value = styled.div<{ color: String }>`
   color: ${(props) => props.color};
