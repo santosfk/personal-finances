@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import * as style from "./styles";
 import { Item } from "../../types/Item";
 import TableItems from "../TableItems";
 
 type Props = {
   list: Item[];
+  handleRemoveItem: (index: number, item: Item) => void;
 };
 
-function Table({ list }: Props) {
+function Table({ list, handleRemoveItem }: Props) {
   return (
     <style.Container>
       <thead>
@@ -20,7 +21,12 @@ function Table({ list }: Props) {
       </thead>
       <tbody>
         {list.map((item, index) => (
-          <TableItems key={index} item={item} />
+          <TableItems
+            key={index}
+            item={item}
+            index={index}
+            handleRemoveItem={handleRemoveItem}
+          />
         ))}
       </tbody>
     </style.Container>

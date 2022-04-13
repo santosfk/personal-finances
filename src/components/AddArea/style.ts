@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.COLOR.DIV};
   height: 120px;
   margin: 50px 0px;
   padding: 15px;
@@ -51,7 +51,7 @@ export const OptionsRadio = styled.div`
   justify-content: space-around;
 
   label {
-    color: var(--blue);
+    color: ${({ theme }) => theme.COLOR.BLUE};
     margin: 0px 5px;
     font-weight: bold;
   }
@@ -122,13 +122,13 @@ export const Submit = styled.div`
     font-size: 1rem;
     border: none;
     padding: 5px;
-    border: 2px solid var(--blue);
+    border: 2px solid var(--white-blue);
     transition: 0.5s;
     border-radius: 5px;
     font-weight: bold;
   }
   input:hover {
-    border: 2px solid var(--green);
+    border: 2px solid var(--white-green);
     color: var(--blue);
     letter-spacing: 2px;
   }
