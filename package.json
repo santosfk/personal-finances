@@ -14,8 +14,6 @@
     "@emotion/styled": "^11",
     "@react-icons/all-files": "^4.1.0",
 
-    "@lottiefiles/react-lottie-player": "^3.4.2",
-    "@types/react-lottie": "^1.2.6",
 
     "@types/styled-components": "^5.1.24",
     "@unform/core": "^2.1.6",
