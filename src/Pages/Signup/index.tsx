@@ -8,7 +8,6 @@ import {
   BsGraphDown as Graphic,
 } from "react-icons/bs";
 import { FaPiggyBank } from "react-icons/fa";
-import MoneyAnimation from "../../animations/components/MoneyAnimation";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -44,9 +43,7 @@ export default function Signup() {
               <span>precioso Money!</span>
             </style.Collum>
           </style.Row>
-          <style.AnimationContent>
-            <MoneyAnimation />
-          </style.AnimationContent>
+          <style.AnimationContent></style.AnimationContent>
         </style.Content>
       </style.Container>
     </>
