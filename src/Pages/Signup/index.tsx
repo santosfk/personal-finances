@@ -39,7 +39,7 @@ export default function Signup() {
               Veja com o que voce e <span>sua familia mais gasta!</span>
             </style.Collum>
             <style.Collum color={"#00FA9A"}>
-              <FaPiggyBank className="ThirdIcon" />E aprenda a guardar seu{" "}
+              <FaPiggyBank className="ThirdIcon" />E aprenda a guardar seu
               <span>precioso Money!</span>
             </style.Collum>
           </style.Row>

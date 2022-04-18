@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Item } from "../../types/Item";
 import * as style from "./style";
 import { useForm } from "react-hook-form";
+import { Input, InputGroup, InputLeftAddon, Radio } from "@chakra-ui/react";
 
 type Props = {
   handleAddList: (item: Item) => void;
@@ -50,7 +51,13 @@ export default function AddArea({ handleAddList }: Props) {
           </style.CategoryContent>
           <style.TitleContent>
             <label>
-              Titulo <input type="text" {...register("title")}></input>
+              Titulo
+              <Input
+                type="text"
+                variant="outline"
+                placeholder="Dê um titulo a transação"
+                {...register("title")}
+              ></Input>
             </label>
           </style.TitleContent>
           <style.ValueContent>
