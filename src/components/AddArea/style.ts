@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLOR.DIV};
-  height: 150px;
-  margin: 30px 0px;
+  height: 200px;
+  margin-bottom: 50px;
   padding: 5px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
   font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 export const FormContent = styled.form`
   display: flex;
@@ -19,7 +22,7 @@ export const FormContent = styled.form`
 
 export const DataContent = styled.div`
   display: flex;
-  margin-top: 20px;
+  margin: 0px 20px;
   label {
     font-weight: bold;
     color: var(--red);
@@ -28,7 +31,6 @@ export const DataContent = styled.div`
     flex-direction: column;
   }
   input {
-    margin-top: 5px;
     outline: none;
     font-weight: bold;
     color: black;
@@ -39,9 +41,9 @@ export const DataContent = styled.div`
 `;
 
 export const CategoryContent = styled.div`
+  margin: 0px 20px;
   display: flex;
   flex-direction: column;
-  margin-top: 18px;
   span {
     text-align: center;
     font-weight: bold;
@@ -55,25 +57,24 @@ export const OptionsRadio = styled.div`
   justify-content: space-around;
 
   label {
+    margin: 0px 10px;
     color: ${({ theme }) => theme.COLOR.BLUE};
-    margin: 0px 5px;
     font-weight: bold;
     color: ${({ theme }) => theme.COLOR.INPUTS};
   }
 `;
 export const TitleContent = styled.div`
+  margin: 0px 20px;
   label {
     display: flex;
     flex-direction: column;
     text-align: center;
     color: var(--red);
     font-weight: bold;
-    margin-top: 5px;
+
     input {
       background: none;
       border: 2px solid var(--white-green);
-      margin-top: 10px;
-      margin-bottom: -10px;
       outline: none;
       width: 250px;
       color: ${({ theme }) => theme.COLOR.INPUTS};
@@ -91,7 +92,7 @@ export const TitleContent = styled.div`
   }
 `;
 export const ValueContent = styled.div`
-  margin-top: 10px;
+  margin: 0px 20px;
   label {
     display: flex;
     flex-direction: column;
@@ -101,7 +102,7 @@ export const ValueContent = styled.div`
   }
   input {
     background: none;
-    margin-top: 10px;
+
     margin-bottom: -5px;
     height: 30px;
     width: 80px;
@@ -122,7 +123,7 @@ export const ValueContent = styled.div`
 `;
 export const Submit = styled.div`
   margin: auto;
-  margin-top: 20px;
+
   input {
     background: none;
     width: 200px;
@@ -142,6 +143,7 @@ export const Submit = styled.div`
   }
 `;
 export const ReceiveAlldata = styled.div`
+  margin: 20px 0px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
