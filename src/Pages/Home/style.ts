@@ -26,3 +26,16 @@ export const Body = styled.div`
   margin: auto;
   max-width: 980px;
 `;
+export const GitHubWrapper = styled.a`
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  :hover {
+    background-color: grey;
+  }
+`;
