@@ -11,8 +11,8 @@ import moment from "moment";
 import { ThemeProvider } from "styled-components";
 import themes from "../../themes";
 import SwitchButton from "../../components/SwitchButton";
-import { List } from "@chakra-ui/react";
-
+import { DiGithubFull as GithubIcon } from "react-icons/di";
+import { theme } from "@chakra-ui/react";
 function Home() {
   const [list, setList] = useState<Item[]>(items);
   const [filteredList, setFilteredList] = useState<Item[]>([]);
@@ -69,6 +69,9 @@ function Home() {
     <ThemeProvider theme={changeTheme ? themes.dark : themes.light}>
       <style.Container>
         <style.Header>
+          <style.GitHubWrapper href="https://github.com/santosfk/personal-finances">
+            <GithubIcon fontSize={70} color={changeTheme ? "white" : "black"} />
+          </style.GitHubWrapper>
           <style.Title>Personal Finances</style.Title>
           <SwitchButton switchTheme={switchTheme} />
         </style.Header>
