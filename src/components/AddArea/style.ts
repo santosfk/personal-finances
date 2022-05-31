@@ -71,24 +71,6 @@ export const TitleContent = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.COLOR.SECONDTEXT};
     font-weight: bold;
-
-    input {
-      background: none;
-      border: 2px solid var(--white-green);
-      outline: none;
-      width: 250px;
-      color: ${({ theme }) => theme.COLOR.INPUTS};
-      font-weight: bold;
-      border-radius: 5px;
-      height: 30px;
-      font-size: 0.8rem;
-      transition: 0.5s;
-      padding-left: 10px;
-    }
-    input:focus {
-      border: 2px solid var(--white-blue);
-      transform: translateY(3px);
-    }
   }
 `;
 export const ValueContent = styled.div`
@@ -100,27 +82,8 @@ export const ValueContent = styled.div`
     font-weight: bold;
     color: ${({ theme }) => theme.COLOR.SECONDTEXT};
   }
-  input {
-    background: none;
-
-    margin-bottom: -5px;
-    height: 30px;
-    width: 80px;
-    padding-left: 10px;
-    border-radius: 5px;
-    font-size: 15px;
-    outline: none;
-    border: none;
-    transition: 0.4s;
-    border: 2px solid var(--white-green);
-    color: ${({ theme }) => theme.COLOR.INPUTS};
-    font-weight: bold;
-  }
-  input:focus {
-    transform: translateY(3px);
-    border: 2px solid var(--white-blue);
-  }
 `;
+
 export const Submit = styled.div`
   margin: auto;
 
@@ -134,7 +97,7 @@ export const Submit = styled.div`
     transition: 0.5s;
     border-radius: 5px;
     font-weight: bold;
-    color: ${({ theme }) => theme.COLOR.TEXT};
+    color: ${({ theme }) => theme.COLOR.FISRTTEXT};
   }
   input:hover {
     border: 2px solid var(--white-green);

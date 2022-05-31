@@ -12,7 +12,7 @@ export const Container = styled.table`
 export const HeadColum = styled.th<{ width?: Number }>`
   width: ${(props) => (props.width ? `${props.width}px` : "auto")};
 
-  color: ${({ theme }) => theme.COLOR.TEXT};
+  color: ${({ theme }) => theme.COLOR.SECONDTEXT};
 
   font-weight: bold;
 `;
