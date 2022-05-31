@@ -25,7 +25,7 @@ export const DataContent = styled.div`
   margin: 0px 20px;
   label {
     font-weight: bold;
-    color: ${({ theme }) => theme.COLOR.GREEN};
+    color: ${({ theme }) => theme.COLOR.SECONDTEXT};
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ export const CategoryContent = styled.div`
   span {
     text-align: center;
     font-weight: bold;
-    color: var(--red);
+    color: ${({ theme }) => theme.COLOR.SECONDTEXT};
   }
 `;
 export const OptionsRadio = styled.div`
@@ -69,7 +69,7 @@ export const TitleContent = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: var(--red);
+    color: ${({ theme }) => theme.COLOR.SECONDTEXT};
     font-weight: bold;
 
     input {
@@ -98,7 +98,7 @@ export const ValueContent = styled.div`
     flex-direction: column;
     text-align: center;
     font-weight: bold;
-    color: var(--red);
+    color: ${({ theme }) => theme.COLOR.SECONDTEXT};
   }
   input {
     background: none;
