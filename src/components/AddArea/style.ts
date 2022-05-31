@@ -25,7 +25,7 @@ export const DataContent = styled.div`
   margin: 0px 20px;
   label {
     font-weight: bold;
-    color: var(--red);
+    color: ${({ theme }) => theme.COLOR.GREEN};
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ export const OptionsRadio = styled.div`
 
   label {
     margin: 0px 10px;
-    color: ${({ theme }) => theme.COLOR.BLUE};
+    color: ${({ theme }) => theme.COLOR.WHITE};
     font-weight: bold;
     color: ${({ theme }) => theme.COLOR.INPUTS};
   }

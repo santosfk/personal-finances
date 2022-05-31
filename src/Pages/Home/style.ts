@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: ${({ theme }) => theme.COLOR.BACKGROUND};
+  background-color: white;
   @import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&display=swap");
   font-family: "Lato", sans-serif;
 `;
