@@ -2,6 +2,7 @@ import React from "react";
 import * as style from "./style";
 import { formatCurrentMonth } from "../../helpers/dateFilter";
 import ResumeItem from "../ResumeItem";
+import themes from "../../themes";
 type Props = {
   currentMonth: string;
   monthChange: (newMonth: string) => void;

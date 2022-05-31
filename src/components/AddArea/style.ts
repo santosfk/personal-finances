@@ -25,7 +25,7 @@ export const DataContent = styled.div`
   margin: 0px 20px;
   label {
     font-weight: bold;
-    color: var(--red);
+    color: ${({ theme }) => theme.COLOR.SECONDTEXT};
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ export const CategoryContent = styled.div`
   span {
     text-align: center;
     font-weight: bold;
-    color: var(--red);
+    color: ${({ theme }) => theme.COLOR.SECONDTEXT};
   }
 `;
 export const OptionsRadio = styled.div`
@@ -58,7 +58,7 @@ export const OptionsRadio = styled.div`
 
   label {
     margin: 0px 10px;
-    color: ${({ theme }) => theme.COLOR.BLUE};
+    color: ${({ theme }) => theme.COLOR.WHITE};
     font-weight: bold;
     color: ${({ theme }) => theme.COLOR.INPUTS};
   }
@@ -69,26 +69,8 @@ export const TitleContent = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: var(--red);
+    color: ${({ theme }) => theme.COLOR.SECONDTEXT};
     font-weight: bold;
-
-    input {
-      background: none;
-      border: 2px solid var(--white-green);
-      outline: none;
-      width: 250px;
-      color: ${({ theme }) => theme.COLOR.INPUTS};
-      font-weight: bold;
-      border-radius: 5px;
-      height: 30px;
-      font-size: 0.8rem;
-      transition: 0.5s;
-      padding-left: 10px;
-    }
-    input:focus {
-      border: 2px solid var(--white-blue);
-      transform: translateY(3px);
-    }
   }
 `;
 export const ValueContent = styled.div`
@@ -98,29 +80,10 @@ export const ValueContent = styled.div`
     flex-direction: column;
     text-align: center;
     font-weight: bold;
-    color: var(--red);
-  }
-  input {
-    background: none;
-
-    margin-bottom: -5px;
-    height: 30px;
-    width: 80px;
-    padding-left: 10px;
-    border-radius: 5px;
-    font-size: 15px;
-    outline: none;
-    border: none;
-    transition: 0.4s;
-    border: 2px solid var(--white-green);
-    color: ${({ theme }) => theme.COLOR.INPUTS};
-    font-weight: bold;
-  }
-  input:focus {
-    transform: translateY(3px);
-    border: 2px solid var(--white-blue);
+    color: ${({ theme }) => theme.COLOR.SECONDTEXT};
   }
 `;
+
 export const Submit = styled.div`
   margin: auto;
 
@@ -134,7 +97,7 @@ export const Submit = styled.div`
     transition: 0.5s;
     border-radius: 5px;
     font-weight: bold;
-    color: ${({ theme }) => theme.COLOR.TEXT};
+    color: ${({ theme }) => theme.COLOR.FISRTTEXT};
   }
   input:hover {
     border: 2px solid var(--white-green);
