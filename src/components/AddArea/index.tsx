@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { Item } from "../../types/Item";
 import * as style from "./style";
 import { useForm } from "react-hook-form";
-import { Input, InputGroup, InputLeftAddon, Radio } from "@chakra-ui/react";
+import {
+  Input,
+  Button,
+  InputGroup,
+  InputLeftAddon,
+  Radio,
+} from "@chakra-ui/react";
 
 type Props = {
   handleAddList: (item: Item) => void;
@@ -53,8 +59,9 @@ export default function AddArea({ handleAddList }: Props) {
             <label>
               Titulo
               <Input
+                style={{ width: "270px" }}
                 type="text"
-                variant="outline"
+                variant="filled"
                 placeholder="Dê um titulo a transação"
                 {...register("title")}
               ></Input>
@@ -63,12 +70,18 @@ export default function AddArea({ handleAddList }: Props) {
           <style.ValueContent>
             <label>
               Valor
-              <input type="number" {...register("value")}></input>
+              <Input
+                type="number"
+                variant="filled"
+                {...register("value")}
+              ></Input>
             </label>
           </style.ValueContent>
         </style.ReceiveAlldata>
         <style.Submit>
-          <input type="submit" />
+          <Button style={{ width: "250px" }} type="submit">
+            Enviar
+          </Button>
         </style.Submit>
       </style.FormContent>
     </style.Container>

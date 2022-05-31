@@ -6,7 +6,9 @@ import { ChakraProvider } from "@chakra-ui/react";
 export default function App() {
   return (
     <ChakraProvider>
-      <AllRoutes />
+      <style.Container>
+        <AllRoutes />
+      </style.Container>
     </ChakraProvider>
   );
 }
