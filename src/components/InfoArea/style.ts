@@ -15,8 +15,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  @media (min-width: 600px) {
-    background-color: green;
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 `;
 
@@ -43,5 +43,8 @@ export const ResumeArea = styled.div`
   align-items: center;
   gap: 2rem;
   font-weight: bold;
+  @media (min-width: 425px) {
+    gap: 2.5rem;
+  }
 `;
 export const MonthTitle = styled.div``;
