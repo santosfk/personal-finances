@@ -11,16 +11,16 @@ export const Header = styled.div`
   width: 100%;
   padding-top: 10px;
   display: flex;
-
-  justify-content: space-evenly;
+  gap: 1rem;
   align-items: center;
 `;
 export const Title = styled.h1`
   color: ${({ theme }) => theme.COLOR.INPUTS};
-  font-size: 2rem;
+  font-size: 1rem;
+  text-align: center;
 `;
 export const LabelSwitch = styled.div`
-  font-size: 1rem;
+  font-size: 0.7rem;
 `;
 export const Body = styled.div`
   margin: auto;
@@ -35,6 +35,7 @@ export const GitHubWrapper = styled.a`
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  font-size: 2rem;
   :hover {
     background-color: grey;
   }

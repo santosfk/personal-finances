@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLOR.DIV};
-  height: 200px;
+  height: 350px;
   margin-bottom: 50px;
   padding: 5px;
   border-radius: 15px;
@@ -108,6 +108,8 @@ export const Submit = styled.div`
 export const ReceiveAlldata = styled.div`
   margin: 20px 0px;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  gap: 0.5rem;
 `;
