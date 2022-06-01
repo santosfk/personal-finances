@@ -33,7 +33,7 @@ export default function AddArea({ handleAddList }: Props) {
           <style.CategoryContent>
             <span> Categoria</span>
             <style.OptionsRadio>
-              <label>Comida</label>
+              <label htmlFor="food">Comida</label>
               <input
                 type="radio"
                 value="food"
@@ -47,7 +47,7 @@ export default function AddArea({ handleAddList }: Props) {
                 {...register("category")}
               ></input>
 
-              <label>Salario</label>
+              <label htmlFor="salary">Salario</label>
               <input
                 type="radio"
                 value="salary"
@@ -59,7 +59,6 @@ export default function AddArea({ handleAddList }: Props) {
             <label>
               Titulo
               <Input
-                style={{ width: "270px" }}
                 type="text"
                 variant="filled"
                 placeholder="Dê um titulo a transação"

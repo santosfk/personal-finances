@@ -70,7 +70,7 @@ function Home() {
       <style.Container>
         <style.Header>
           <style.GitHubWrapper href="https://github.com/santosfk/personal-finances">
-            <GithubIcon fontSize={70} color={changeTheme ? "white" : "black"} />
+            <GithubIcon color={changeTheme ? "white" : "black"} />
           </style.GitHubWrapper>
           <style.Title>Personal Finances</style.Title>
           <SwitchButton switchTheme={switchTheme} />
